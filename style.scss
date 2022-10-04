@@ -1,0 +1,2235 @@
+*, html, body, div, p,
+footer, header, section, 
+h1, h2, h3, h4, h5, h6,
+ul, ol, li, a {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
+    text-decoration: none;
+    list-style-type: none;
+    font-family: 'Montserrat';
+    color: #fff;
+    font-weight: 400;
+}
+
+
+// ------------------------------------- TEXT -------------------------------------
+.font {
+    &__weigth500 {
+        font-weight: 500;
+    }
+    &__weigth600 {
+        font-weight: 600;
+    }
+    &__uppercase {
+        text-transform: uppercase;
+    }
+    &__no-wrap {
+        white-space: nowrap;
+    }
+}
+// ------------------------------------- END TEXT -------------------------------------
+
+// ------------------------------------- COLOR -------------------------------------
+.color {
+    &__white {
+        color: #fff;
+    }
+    &__black {
+        color: #000;
+    }
+    &__orange {
+        color: #FA4500;
+    }
+}
+.background {
+    &__white {
+        background: #fff;
+    }
+    &__black {
+        background: #000;
+    }
+    &__main {
+        background: rgba(44, 44, 44, 1.0);
+    }
+    &__orange {
+        background: #FA4500;
+    }
+}
+// ------------------------------------- END COLOR -------------------------------------
+
+// ------------------------------------- SHARED -------------------------------------
+.shared {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0;
+    &__container {
+        max-width: 1400px;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+    &__header {
+        font-size: 1.8rem;
+        margin: 0 50px;
+    }
+    &__line {
+        height: 2.01px;
+        width: 140px;
+    }
+    &__inblock {
+        display: inline-block;
+    }
+}
+// ------------------------------------- END SHARED -------------------------------------
+
+
+
+// ------------------------------------- HEADER -------------------------------------
+header {
+    width: 100%;
+    background-color: rgba(44, 44, 44, 1);
+    position: fixed;
+    z-index: 9999;
+    opacity: 0.7;
+    & ~ .block {
+        height: 100px;
+        background-color: rgba(44, 44, 44, 1.0);
+    }
+}
+.nav {
+    &-mobile {
+    display: none;
+    }
+    &__list {
+    display: flex;
+    justify-content: center;
+    height: 100px;
+    align-items: center;
+    &-item {
+        padding: 0 20px;
+        &:last-child,
+        &:first-child {
+        padding: 0;
+        }
+    }
+    &-logo {
+        margin: 0 50px;
+    }
+    
+    }
+}
+// ------------------------------------- END HEADER -------------------------------------
+
+// ------------------------------------- INTRO -------------------------------------
+.intro {
+    position: relative;
+    height: 700px;
+    background: url('/assets/intro__background.png') no-repeat;
+    background-size: cover; /* Фон занимает всю доступную площадь */
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;    
+    &__inner {
+        display: inherit;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 100px;
+    }
+    &__title {
+        font-size: 1.8rem;
+    }
+    &__subtitle {
+        font-size: 2rem;
+    }
+    &__arrow {
+        position: relative;
+        margin-bottom: 10px;
+        &-top {
+            position: absolute;
+        }
+        &-bottom {
+            margin-top: 15px;
+        }
+        animation: intro__arrow 2s infinite;
+    }
+
+    @keyframes intro__arrow {
+        0% {
+            bottom: 20px;
+        }
+        50% {
+            bottom: 0;
+        }
+        100% {
+            bottom: 20px;
+        }
+    }
+    
+}
+// ------------------------------------- END INTRO -------------------------------------
+
+// ------------------------------------- ABOUT -------------------------------------
+.about { 
+    &-mobile__info,
+    &-mobile__description {
+        display: none;
+    }   
+    position: relative;
+    &-mobile__slogan {
+        display: none;
+    }
+    &-desctop__slogan {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        & :first-child {
+            position: absolute;
+        }
+        & :last-child {
+            position: absolute;
+            left: 25px;
+            bottom: 10px;
+        }
+    }
+    &-desctop__description {
+        margin-top: 60px;
+        text-align: center;
+    }
+    &__info {
+        display: flex;
+        justify-content: space-around;
+        &-top {
+            margin-top: 100px;
+            margin-bottom: 115px;
+        }
+        &-box {
+            display: flex; 
+            & > span {
+                color: #000;
+            }          
+        }        
+    }
+    &__footer {
+        margin: 100px 0 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &-title {
+            margin: 10px 0;
+            font-size: 1.2rem;
+            color: #000;
+        }
+        &-text {
+            color: #000;
+            max-width: 650px;
+        }
+    }    
+}
+// ------------------------------------- END ABOUT -------------------------------------
+
+// ------------------------------------- PRODUCTS -------------------------------------
+.products {
+    padding-top: 0.1px;
+    &__header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    &__cards {
+        display: flex;
+        justify-content: space-around;
+    }
+    &__card {
+        margin-bottom: 40px;
+        position: relative;
+        & > img {
+            opacity: 0.37;
+            &:hover {
+                opacity: 1;
+            }
+        }
+        &-title{
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translate(-50%);
+            white-space: nowrap;
+        }
+    }
+}
+// ------------------------------------- END PRODUCTS -------------------------------------
+
+// ------------------------------------- DOORS -------------------------------------
+.doors{
+    position: relative;
+    margin: 20px 0 40px;
+    &__body {        
+        display: flex;
+        flex-direction: column;
+        &-top{
+            display: flex;
+            justify-content: space-between;
+            & > .doors__img {
+                margin-right: 50px;
+                margin-left: 20px;
+            }
+            & > div > .doors__info {
+                padding-right: 20px;
+            }
+        }
+        &-bottom {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            margin: 60px 0 40px;
+            & > .doors__img {
+                margin-right: 20px;
+                margin-left: 50px;
+            }
+            & > div > .doors__info {
+                padding-left: 20px;
+            }
+        }
+    }
+    &__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        &-title {
+            margin-bottom: 25px;
+            & > p {
+                color: rgba(250, 69, 0, 1);
+                font-size: 1.2rem;
+            }
+        }
+        &-params{
+            margin: 40px 0;
+        }
+        &-switch{
+            display: flex;
+           
+        }
+    }    
+}
+// ------------------------------------- END DOORS -------------------------------------
+
+// ------------------------------------- DRAWER -------------------------------------
+.drawer {
+    display: flex;
+    position: relative;
+ 
+    &__info {
+        display: flex;
+        margin-top: 60px;
+        flex-wrap: wrap;
+        &-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            width: 33.3333%;
+            margin-bottom: 60px;
+            & > p {
+                min-width: 310px;
+            }
+        }    
+    }
+    &__gallery {
+        display: flex;
+        flex-direction: column;
+        &-items {
+            display: flex;
+        }
+        &-item{
+            margin-right: 25px;
+        }
+        & :last-child {
+            margin-right: 0;
+        }
+        &-switch{
+            display: flex;
+            justify-content: center;
+            margin: 40px 0;
+        }        
+    }
+}
+// ------------------------------------- END DRAWER -------------------------------------
+
+// ------------------------------------- PROFILED -------------------------------------
+.profiled {
+    margin: 50px 0;
+    &__body {
+        display: flex;
+        flex-direction: column;
+        padding: 0 20px;
+    }
+    &__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 50px;
+        &-info {
+            max-width: 600px;
+            margin-right: 20px;
+            & > h2 {
+                margin-top: -25px;
+                margin-bottom: 25px;
+                font-size: 1.2rem;
+            }
+        }
+        &-images {
+            display: flex;
+        }
+    }
+    &__j, &__f {
+        margin-right: 30px;
+        &-description {
+            display: flex;
+            justify-content: space-between;
+            & > h2 {
+                font-size: 1.2rem;
+            }
+        }
+    }
+    &__f {
+        margin-right: 0;
+    }
+    &__line {
+        height: 1px;
+        width: 125px;
+        background: #000;
+        display: flex;
+        align-self: center;
+    }
+    &__bottom {
+        display: flex;
+        align-self: center;
+        align-items: center;
+        margin-bottom: 50px;
+        & > .profiled__info {
+            min-width: 200px;
+            margin-left: 20px;
+            display: block;
+            & > h2 {
+                display: inline-block;
+                margin-bottom: 20px;
+                font-size: 1.2rem;
+            }
+        }
+        & > .profiled__slider {
+            display: flex;
+            position: relative;
+                width: 650px;
+                height: 330px;
+            & > .slider > div > h3 {
+                position: absolute;
+                top: 350px;
+            }
+            & > .slider > div > img {
+                position: absolute;
+                height: 330px;
+                width: 650px;
+                min-width: 550px;
+            }
+            & > .profiled__info-switch {
+                display: flex;
+                position: absolute;
+                right: 20px;
+                top: 340px;
+            }
+        }
+    }
+}
+// ------------------------------------- END PROFILED -------------------------------------
+
+// ------------------------------------- WALL -------------------------------------
+.doors{
+    position: relative;
+    margin: 20px 0 0;
+    &__container {
+        display: flex;
+    }
+    &__body {        
+        display: flex;
+        flex-direction: column;
+        &-top{
+            display: flex;
+            justify-content: space-between;
+            & > .doors__img {
+                margin-right: 50px;
+                margin-left: 20px;
+                max-height: 450px;
+                min-height: 450px;
+                width: 100%;
+                & > div {
+                    max-height: 450px;
+                    min-height: 450px;
+                    width: 100%;
+                & > img {
+                        max-height: 450px;
+                        min-height: 450px;
+                        width: 100%;
+                    }
+                }
+            }
+            & > div > .doors__info {
+                padding-right: 20px;
+            }
+        }
+        &-bottom {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            margin: 60px 0 40px;
+            & > .doors__img {
+                margin-right: 20px;
+                margin-left: 50px;
+                max-height: 450px;
+                min-height: 450px;
+                width: 100%;
+                & > div {
+                    max-height: 450px;
+                    min-height: 450px;
+                    width: 100%;
+                & > img {
+                        max-height: 450px;
+                        min-height: 450px;
+                        width: 100%;
+                    }
+                }
+            }
+            & > div > .doors__info {
+                padding-left: 20px;
+            }
+        }
+    }
+    &__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        &-title {
+            margin-bottom: 25px;
+            & > p {
+                color: rgba(250, 69, 0, 1);
+                font-size: 1.2rem;
+            }
+        }
+        &-params{
+            margin: 40px 0;
+        }
+        &-switch{
+            display: flex;
+        }
+    }    
+}
+// ------------------------------------- END WALL -------------------------------------
+
+// ------------------------------------- MATERIALS -------------------------------------
+.materials {
+    margin: 20px 20px 20px;
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      &__title {
+          margin:0 100px 0;
+      }
+    &__icons {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__content {
+        position: relative;
+        height: 140px;
+        width: 100%;
+    }
+    &__box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    &__button {
+        & > a {
+            position: relative;
+            display: inline-block;
+            padding: 20px 180px;
+            color: rgba(250, 69, 0, 1);
+            font-size: 16px;
+            text-decoration: none;
+            text-transform: uppercase;
+            overflow: hidden;
+            transition: 1s;
+            letter-spacing: 4px;
+            border-radius: 27px;
+            white-space: nowrap;
+        }
+        & > a:hover {
+            background: rgba(250, 69, 0, 1);
+            color: #fff;
+        }
+    }
+}
+// ------------------------------------- END MATERIALS -------------------------------------
+
+// ------------------------------------- FORMS -------------------------------------
+.form {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    background-color: rgba(40,40,40,1);
+    &__picture {
+        min-height: 750px;
+        width: 50%;
+        position: relative;
+        opacity: 0.4;
+        & > img {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+        }
+    }
+    &__content {
+        position: relative;
+        width: 50%; 
+    }
+    &__box {
+        position: absolute;
+        width: 550px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        & > h3 {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        & > form > h4 {
+            margin-bottom: 40px;
+        }
+    }
+    &__user {
+        position: relative;
+        & > input {
+            width: 100%;
+            padding: 10px 0;
+            color: #fff;
+            margin-bottom: 30px;
+            border: none;
+            border-bottom: 1px solid #fff;
+            outline: none;
+            background: none;
+            border-radius: 0;            
+        }        
+        & > label {
+            position: absolute;
+            top:0;
+            left: 0;
+            padding: 10px 0;
+            font-size: 16px;
+            color: #fff;
+            pointer-events: none;
+            transition: .5s;
+            opacity: 0.4;
+        }
+    }
+    &__checkbox {
+        display: flex;
+        justify-content: space-between;
+    }
+    // &__question {
+        // margin-top: 100px;
+
+    // }
+    &__button {
+            position: relative;
+            display: inline-block;
+            padding: 20px 180px;
+            color: rgba(250, 69, 0, 1);
+            font-size: 16px;
+            text-decoration: none;
+            text-transform: uppercase;
+            overflow: hidden;
+            transition: 1s;
+            letter-spacing: 4px;
+            border-radius: 27px;
+            background-color: transparent;
+            border: 1px solid rgba(250, 69, 0, 1);
+        &:hover {
+            background: rgba(250, 69, 0, 1);
+            color: #fff;
+        }
+    }
+}
+// .form__box .form__user input:focus ~ label,
+.form__box .form__user input:focus ~ label {
+    top: -20px;
+    left: 0;
+    color: rgba(250, 69, 0, 1);
+    font-size: 12px;
+}
+
+
+// ------------------------------------- END FORMS -------------------------------------
+
+// ------------------------------------- BUTTON FORMS+MATERIALS -------------------------------------
+.materials__box a span,
+.form__box a span {
+    position: absolute;
+    display: block;
+}
+.materials__box a span:nth-child(1),
+.form__box a span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(250, 69, 0, 1));
+    animation: btn-anim1 2s linear infinite;
+}
+  
+@keyframes btn-anim1 {
+    0% {
+        left: -100%;
+    }
+    50%,100% {
+        left: 100%;
+}
+}
+.materials__box a span:nth-child(2),
+.form__box a span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, rgba(250, 69, 0, 1));
+    animation: btn-anim2 2s linear infinite;
+    animation-delay: .5s
+}
+
+@keyframes btn-anim2 {
+    0% {
+        top: -100%;
+    }
+    50%,100% {
+        top: 100%;
+    }
+}
+.materials__box a span:nth-child(3),
+.form__box a span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, rgba(250, 69, 0, 1));
+    animation: btn-anim3 2s linear infinite;
+    animation-delay: 1s
+}
+
+@keyframes btn-anim3 {
+    0% {
+        right: -100%;
+    }
+    50%,100% {
+        right: 100%;
+    }
+}
+  
+  .materials__box a span:nth-child(4),
+  .form__box a span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, rgba(250, 69, 0, 1));
+    animation: btn-anim4 2s linear infinite;
+    animation-delay: 1.5s
+  }
+  
+@keyframes btn-anim4 {
+    0% {
+      bottom: -100%;
+    }
+    50%,100% {
+      bottom: 100%;
+    }
+}
+  
+.main {
+    display: block;
+    position: relative;
+    padding-left: 45px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    text-align: center;
+    align-items: center;
+    & > span {
+        font-size: 0.8rem;
+        color: #fff;
+    }
+}
+  
+/* Hide the default checkbox */
+input[type=checkbox] {
+    visibility: hidden;
+    display: none;
+}
+  
+/* Creating a custom checkbox
+based on demand */
+.geekmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: transparent;
+    border: 1px solid rgba(250, 69, 0, 1);
+}
+
+.geekmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+  
+.main input:checked ~ .geekmark:after {
+    display: block;
+}
+  
+.main .geekmark:after {
+    left: 8px;
+    bottom: 5px;
+    width: 6px;
+    height: 12px;
+    border: solid rgba(250, 69, 0, 1);
+    border-width: 0 4px 4px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+// ------------------------------------- END BUTTON FORMS+MATERIALS -------------------------------------
+
+// ------------------------------------- CONTACTS -------------------------------------
+.contacts {
+    &__body {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 20px;
+        margin: 60px 0 80px;
+    }
+    &__info {
+        display: flex;
+        align-self: center;        
+        & > div >h2 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }        
+    }
+    &__main {
+        margin-right: 50px;
+    }
+    &__main, &__manufacture {
+        min-width: 199px;
+        max-width: 201px;
+    }
+    &__img > img{
+        min-height: 275px;
+    }
+}
+// ------------------------------------- END CONTACTS -------------------------------------
+
+
+// ------------------------------------- FOOTER -------------------------------------
+.footer {
+    &__items {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 50px 50px;
+    }
+    &__item-name {
+        &:first-child {
+            margin-bottom: 20px;
+        }
+    }
+    &__banner {
+        margin-left: 50px;
+    }
+    &__social {
+        display: flex;
+        justify-content: center;
+    }
+    
+}
+// ------------------------------------- END FOOTER -------------------------------------
+
+
+// ----------------------------------- ICON__RHOMB -----------------------------------
+.icon {
+    display: flex;
+    align-items: center;
+    margin-right: 25px;
+    &__rhomb {
+        border: 11px solid transparent;
+        border-bottom: 15px solid rgba(250, 69, 0, 1);
+        position: relative; 
+        top: -11px;
+        width: 0px;
+        height: 0px;
+        &::after {
+            content: "";
+            position: absolute; 
+            left: -11px; 
+            top: 15px;
+            border: 11px solid transparent;
+            border-top: 15px solid rgba(250, 69, 0, 1);
+            width: 0px;
+            height: 0px;
+        }
+    }
+}
+// ----------------------------------- END ICON__RHOMB -----------------------------------
+
+
+// ----------------------------------- ARROW -----------------------------------
+.arrow {
+    &__left {
+        cursor: pointer;
+        position: relative;
+        width: 55px;
+        height: 5px;
+        margin: 10px;
+        & div {
+            position: relative;
+            top: 10px;
+            width: 60px;
+            height: 2px;
+            display: block;
+        }
+        & div::after {
+            content: '';
+            position: absolute;
+            width: 10px;
+            height: 2px;
+            top: -3px;
+            left: -2px;
+            background-color: inherit;
+            transform: rotate(135deg);
+        }
+        & div::before {
+            content: '';
+            position: absolute;
+            width: 10px;
+            height: 2px;
+            top: 3px;
+            left: -2px;
+            background-color: inherit;
+            transform: rotate(-135deg);
+        }
+    }
+
+    &__right {
+        cursor: pointer;
+        position: relative;
+        width: 40px;
+        height: 25px;
+        margin: 10px;
+        margin-left: 50px;
+        & div {
+            position: relative;
+            top: 10px;
+            width: 60px;
+            height: 2px;
+            display: block;
+        }
+        & div::after {
+            content: '';
+            position: absolute;
+            width: 10px;
+            height: 2px;
+            top: -3px;
+            right: -2px;
+            background-color: inherit;
+            transform: rotate(45deg);
+        }
+        & div::before {
+            content: '';
+            position: absolute;
+            width: 10px;
+            height: 2px;
+            top: 3px;
+            right: -2px;
+            background-color: inherit;
+            transform: rotate(-45deg);
+        }
+    }
+}
+
+.wodo__arrow {
+    margin-left: 20px;
+    &-l {
+        position: relative;
+        & > .wodo__arrow-left {
+            margin-left: 80px;
+            top: -20px;
+            display: none;
+            border-bottom: 10px solid transparent;
+            border-top: 10px solid transparent;
+            border-right: 15px solid rgb(199, 199, 199, 0.8);
+        }   
+    }
+    &-r {
+        & > .wodo__arrow-right {
+            margin-left: 50px;
+            top: -20px;
+            display: none;
+            border-bottom: 10px solid transparent;
+            border-top: 10px solid transparent;
+            border-left: 15px solid rgb(199, 199, 199, 0.8);
+        }
+    }
+    
+}
+// ----------------------------------- END ARROW -----------------------------------
+
+
+
+// ------------------------------------- MEDIA -------------------------------------
+
+@media screen and (max-width: 1200px) {
+// ----------------------------------- HEADER -----------------------------------    
+    header {
+        & ~ .block {
+            height: 100px;
+        }
+    }
+    .nav{
+        &__list {
+          height: 100px;
+          &-item {
+            padding: 0 15px;
+            &:last-child,
+            &:first-child {
+              padding: 0;
+            }
+            & > a {
+              font-size: 0.9rem;
+            }
+          }
+          &-logo {
+            margin: 0 20px;
+          }
+        }
+        
+    }
+// ----------------------------------- END HEADER -----------------------------------
+
+// ------------------------------------- ABOUT -------------------------------------
+    .about {       
+        &-desctop__description {
+            margin-top: 0;
+            & > p {
+                font-size: 0.9rem;
+            }
+        }
+        &__info {
+            &-box {
+                & > span {
+                    font-size: 0.9rem;
+                }          
+            }        
+        }
+        &__footer {
+            &-title {
+                font-size: 1.2rem;
+            }
+            &-text {
+                font-size: 0.9rem;
+            }
+        }    
+    }
+// ------------------------------------- END ABOUT -------------------------------------
+
+// ------------------------------------- PRODUCTS -------------------------------------
+    .products {
+        &__cards {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 40px;
+        }
+        &__card {
+            position: relative;
+            margin-bottom: 30px;
+            & > img {
+                display: block;
+                object-fit: cover;
+                width: 325px;
+                height: 325px;
+            }
+            &-title{
+                position: absolute;
+                bottom: 30px;
+                left: 50%;
+                transform: translate(-50%);
+                white-space: nowrap;
+                font-size: 1.5rem;
+            }
+        }
+    }
+// ------------------------------------- END PRODUCTS -------------------------------------
+
+// ------------------------------------- DOORS -------------------------------------
+    .doors{
+        &__body {
+            &-top {
+                height: 400px;
+                width: auto;
+                & > .doors__img {
+                    height: inherit;
+                    width: auto;
+                    min-height: 400px;
+                    max-height: 400px;
+                    width: 100%;
+                    margin-right: 30px;
+                    & > .item {
+                        height: inherit;
+                        width: auto;
+                        min-height: 400px;
+                        max-height: 400px;
+                        width: 100%;
+                        & > img {
+                            height: inherit;
+                            width: auto;
+                            min-height: 400px;
+                            max-height: 400px;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+            &-bottom {
+                height: 400px;
+                width: auto;
+                & > .doors__img {
+                    height: inherit;
+                    width: auto;
+                    min-height: 400px;
+                    max-height: 400px;
+                    width: 100%;
+                    margin-left: 30px;
+                    & > .item {
+                        height: inherit;
+                        width: auto;
+                        min-height: 400px;
+                        max-height: 400px;
+                        width: 100%;
+                        & > img {
+                            height: inherit;
+                            width: auto;
+                            min-height: 400px;
+                            max-height: 400px;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+// ------------------------------------- END DOORS -------------------------------------
+
+// ------------------------------------- DRAWER -------------------------------------
+    .drawer {
+        &__info {
+            &-box {
+                & > p {
+                    min-width: 250px;
+                    font-size: 0.8rem;
+                }
+            }    
+        }
+    }
+// ------------------------------------- END DRAWER -------------------------------------
+
+// ------------------------------------- PROFILED -------------------------------------
+    .profiled {
+        &__top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 50px;
+            &-info {
+                max-width: 500px;
+                & > h2 {
+                    margin-top: -25px;
+                    margin-bottom: 25px;
+                    font-size: 1rem;
+                }
+                & > p {
+                    font-size: 0.8rem;
+                }
+            }
+            &-images {
+                display: flex;
+            }
+        }
+        &__j, &__f {
+            margin-right: 30px;
+            &-description {
+                display: flex;
+                justify-content: space-between;
+                & > h2 {
+                    font-size: 1rem;
+                }
+            }
+        }
+        &__f {
+            margin-right: 0;
+        }
+        &__line {
+            height: 1px;
+            width: 100px;
+            background: #000;
+            display: flex;
+            align-self: center;
+        }
+        &__bottom {
+            display: flex;
+            align-self: center;
+            align-items: center;
+            margin-bottom: 50px;
+            & > .profiled__info {
+                min-width: 200px;
+                margin-left: 30px;
+                & > h2 {
+                    margin-bottom: 20px;
+                    font-size: 1rem;
+                }
+                & > p {
+                    font-size: 0.8rem;
+                }
+            }
+            & > .profiled__slider {
+                display: flex;
+                position: relative;
+                    width: 650px;
+                    min-width: 550px;
+                    height: 280px;
+                & > .slider > div > h3 {
+                    position: absolute;
+                    top: 300px;
+                }
+                & > .slider > div > img {
+                    position: absolute;
+                    height: 280px;
+                    width: 650px;
+                    min-width: 550px;
+                }
+                & > .profiled__info-switch {
+                    display: flex;
+                    position: absolute;
+                    right: 20px;
+                    top: 290px;
+                }
+            }
+        }
+    }
+// ------------------------------------- END PROFILED -------------------------------------
+
+// ------------------------------------- MATERIALS -------------------------------------
+    .materials {
+        margin: 20px 20px 20px;
+        &__header {
+            margin-bottom: 20px;
+        }
+        &__icon > img {
+            width: 300px;
+            height: auto;
+        }
+        &__button {
+            & > a {
+                padding: 20px 115px;
+            }
+        }
+    }
+// ------------------------------------- END MATERIALS -------------------------------------
+
+// ------------------------------------- FORMS -------------------------------------
+    .form {
+        height: 750px;
+        &__content {
+            width: 100%;
+        }
+        &__picture {
+            display: none;
+        }
+        &__button {                
+            display: flex;
+            justify-content: center;
+            margin: 0 auto;
+        }
+    }
+// ------------------------------------- END FORMS -------------------------------------
+
+}
+
+@media screen and (max-width: 1024px) {
+    .shared {
+        margin: 30px 0;
+        &__header {
+            font-size: 1.3rem;
+            margin: 0 30px;
+        }
+        &__line {
+            width: 100px;
+        }
+    }
+// ----------------------------------- HEADER -----------------------------------
+    header {
+        & ~ .block {
+            height: 60px;
+        }
+    }
+    .nav {
+        display: none;
+    }
+    .nav-mobile {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    &__logo > img {
+        height: 40px;
+    }
+    &__menu {
+        display: flex;
+        list-style-type: none;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+    }
+    &__menu > .nav__list-item {
+        padding: 0 8px;
+        overflow: hidden;
+        &:last-child {
+        padding-right: 0;
+        }
+        & > a {
+            font-size: 0.7rem;
+        }
+    }
+    
+    &__container-menu {
+        display: none;
+        height: 100%;
+        width: 30px;
+        cursor: pointer;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    &__button,
+    &__button::before,
+    &__button::after {
+        display: block;
+        background-color: #fff;
+        position: absolute;
+        height: 4px;
+        width: 30px;
+        transition: transform 700ms cubic-bezier(0.23, 1, 0.32, 1);
+        border-radius: 2px;
+    }
+    &__button::before {
+        content: '';
+        margin-top: -8px;
+    }
+    &__button::after {
+        content: '';
+        margin-top: 8px;
+    }
+    
+    }
+    #menu-toggle {
+        display: none;
+        &:checked + .nav-mobile__container-menu .menu-button {
+            background-color: transparent;
+        }
+        &:checked + .nav-mobile__container-menu .menu-button::before {
+            margin-top: 0px;
+            transform: rotate(405deg);
+        }
+        &:checked + .nav-mobile__container-menu .menu-button::after {
+            margin-top: 0px;
+            transform: rotate(-405deg);
+        }
+    }
+// ----------------------------------- END HEADER -----------------------------------
+  
+// ------------------------------------- INTRO -------------------------------------
+    .intro {
+        height: 60vh;
+        width: auto;
+        &__title {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+        &__subtitle {
+            font-size: 1.5rem;
+        }
+    }
+// ------------------------------------- END INTRO -------------------------------------
+
+// ----------------------------------- ABOUT -----------------------------------
+    .about {
+        position: relative;
+        height: 700px;
+        &-desctop__info, 
+        &-desctop__description,
+        &-desctop__slogan {
+            display: none;
+        }
+        &-mobile__slogan {
+            display: flex;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            & :first-child {
+                position: absolute;
+            }
+            & :last-child {
+                position: absolute;
+                left: 25px;
+                bottom: 10px;
+            }
+        }
+        &-mobile__description {
+            display: flex;
+            text-align: center;
+            margin: 0 auto;
+            width: 600px;
+            margin-bottom: 20px;
+        }
+        &-mobile__info {
+            display: flex;
+            flex-direction: column;
+            &-box {
+                margin-left: 20%;
+                &:last-child {
+                    margin-left: calc(20% + 50px);
+                    width: 400px;
+                }
+                display: flex;
+                align-items: center;
+                & > .text {
+                    color: #000;
+                    padding: 10px 0;
+                }
+            }
+        }
+    }
+// ----------------------------------- END ABOUT -----------------------------------
+
+// ------------------------------------- PRODUCTS -------------------------------------
+    .products {
+        margin-top: 30px;
+        &__title {
+            margin: 0 50px 20px;
+        }
+        &__cards {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 0;
+        }
+        &__card {
+            position: relative;
+            margin-bottom: 20px;
+            margin-right: 20px;
+            &:last-child {
+                margin-right: 0;
+            }
+            & > img {
+                display: block;
+                object-fit: cover;
+                width: 250px;
+                height: 250px;
+            }
+            &-title{
+                position: absolute;
+                bottom: 30px;
+                left: 50%;
+                transform: translate(-50%);
+                white-space: nowrap;
+                font-size: 1rem;
+            }
+        }
+    }
+// ------------------------------------- END PRODUCTS -------------------------------------
+
+// ------------------------------------- DOORS -------------------------------------
+    .doors{
+        
+        &__container {
+            display: block;
+            margin-top: 10px;
+        }
+        &__body {
+            &-top {
+                display: flex;
+                flex-direction: column;
+                height: auto;
+                & > .doors__img {
+                    margin: 0 auto;
+                    height: 100%;
+                    width: auto;
+                    & > div {
+                        height: 100%;
+                        width: auto;                        
+                        & > img {
+                            height: 100%;
+                            width: auto;
+                        }
+                    }
+                }                 
+            } 
+            &-bottom {
+                display: flex;
+                flex-direction: column;
+                height: auto;
+                & > .doors__img {
+                    margin: 0 auto;
+                    height: 100%;
+                    width: auto;
+                    & > div {
+                        height: 100%;
+                        width: auto;                        
+                        & > img {
+                            height: 100%;
+                            width: auto;
+                        }
+                    }
+                }                 
+            }   
+        }
+        &__info {
+            max-width: 890px;
+            position: relative;
+            margin: 0 auto;
+            padding: 0 20px;
+            &-switch {
+                position: absolute;
+                top: 0;
+                right: 40px;
+            }
+        }
+    }
+// ------------------------------------- END DOORS -------------------------------------
+
+// ------------------------------------- DRAWER -------------------------------------
+    .drawer {
+        &__info {
+            margin-top: 30px;
+        }
+        &__info-box{
+            width: 50%;
+        }
+        &__gallery-switch {
+            margin: 15px 0;
+        }
+    }
+// ------------------------------------- END DRAWER -------------------------------------
+
+// ------------------------------------- PROFILED -------------------------------------
+    .profiled {
+        margin: 20px 0;
+        &__top {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 40px;
+            margin-top: 40px;
+            &-info {
+                max-width: 650px;
+                & > h2 {
+                    font-size: 1.2rem;
+                    margin-bottom: 25px;
+                }
+                & > p {
+                    font-size: 1rem;
+                    margin-bottom: 25px;
+                }
+            }
+            &-images {
+                display: flex;
+            }
+        }
+        &__j, &__f {
+            margin-right: 30px;
+            &-description {
+                display: flex;
+                justify-content: space-between;
+                & > h2 {
+                    font-size: 1rem;
+                }
+            }
+        }
+        &__f {
+            margin-right: 0;
+        }
+        &__line {
+            height: 1px;
+            width: 125px;
+            background: #000;
+            display: flex;
+            align-self: center;
+        }
+        &__bottom {
+            display: flex;
+            flex-direction: column-reverse;
+            margin-bottom: 50px;
+            & > .profiled__info {
+                max-width: 650px;
+                min-width: 200px;
+                margin-left: 30px;
+                & > h2 {
+                    margin-bottom: 20px;
+                    font-size: 1.2rem;
+                }
+                & > p {
+                    font-size: 1rem;
+                    margin-bottom: 20px;
+                }
+            }
+            & > .profiled__slider {
+                display: flex;
+                position: relative;
+                width: 650px;
+                min-width: 550px;
+                height: 280px;
+                & > .slider > div > h3 {
+                    position: absolute;
+                    top: 300px;
+                }
+                & > .slider > div > img {
+                    position: absolute;
+                    height: 280px;
+                    width: 650px;
+                    min-width: 550px;
+                }
+                & > .profiled__info-switch {
+                    display: flex;
+                    position: absolute;
+                    right: 20px;
+                    top: 290px;
+                }
+            }
+        }
+    }
+// ------------------------------------- END PROFILED -------------------------------------
+
+// ------------------------------------- MATERIALS -------------------------------------
+    .materials {
+        margin-top: 0;
+        margin-bottom: 0;
+        &__icon > img {
+            width: 100%;
+        }
+    }
+// ------------------------------------- END MATERIALS -------------------------------------
+
+// ------------------------------------- CONTACTS -------------------------------------
+    .contacts {
+        &__body {
+            display: flex;
+            flex-direction: column;
+            padding: 0;
+            margin: 30px 0 0;
+        }
+        &__info {
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+            margin-bottom: 25px;
+            & > div >h2 {
+                font-size: 1.2rem;
+                margin-bottom: 20px;
+            }        
+        }
+        &__main {
+            margin-right: 50px;
+        }
+        &__main, &__manufacture {
+            min-width: 50;
+            max-width: 201px;
+        }
+        &__img > img{
+            width: 100%;
+            vertical-align: top;
+        }
+    }
+// ------------------------------------- END CONTACTS -------------------------------------
+
+// ------------------------------------- FOOTER -------------------------------------
+.footer {
+    &__items {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin: 30px 0;
+    }
+    &__item-name {
+        &:first-child {
+            margin-bottom: 0;
+        }
+    }
+    &__banner {
+        margin-left: 0;
+        margin: 15px 0;
+    }
+    &__social {
+        display: flex;
+        justify-content: center;
+    }
+    
+}
+// ------------------------------------- END FOOTER -------------------------------------
+
+}
+
+@media screen and (max-width: 768px) {
+    .shared {
+        margin: 15px 0;
+        &__header {
+            font-size: 0.9rem;
+            margin: 0 10px;
+        }
+        &__line {
+            width: 60px;
+        }
+    }
+
+// ----------------------------------- HEADER -----------------------------------
+    header {
+        opacity: 0.7;
+    }
+   .nav-mobile {
+        &__container-menu {
+        display: flex;
+        }
+        &__menu {
+        position: absolute;
+        top: 0;
+        margin-top: 60px;
+        left: 0;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        & > li {
+            justify-content: center;
+            margin: 0;
+            padding: 0.5em 0;
+            width: 100%;
+        }
+        }
+    }    
+    #menu-toggle {
+        & ~ .menu li {
+            height: 0;
+            margin: 0;
+            padding: 0;
+            border: 0;    
+            transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        &:checked ~ .menu li {
+            background: rgba(44, 44, 44, 1);
+            border-bottom: 1px solid rgb(255, 255, 255);
+            height: 2em;
+            padding: 0.5em;
+            transition: all 0.35s ease-out;
+        }
+        &:checked ~ .menu li:last-child {
+            border-bottom: none;
+        }
+    }
+// ----------------------------------- END HEADER -----------------------------------
+  
+// ------------------------------------- INTRO -------------------------------------
+    .intro {
+        &__inner {
+            align-items: center;
+            text-align: center;
+        }
+        &__title {
+            font-size: 1.0rem;
+            margin-bottom: 10px;
+        }
+        &__subtitle {
+            font-size: 1.1rem;
+            padding: 0 20px;
+        }
+        &__arrow {
+            display: none;
+        }
+    }
+// ------------------------------------- END INTRO -------------------------------------
+
+// ------------------------------------- ABOUT -------------------------------------
+    .about {
+        height: 560px;
+        &-mobile {
+            &__description {
+                width: auto;
+                max-width: 560px;
+                min-width: 320px;
+                padding: 0 20px;
+                & > p {
+                    font-size: 0.8rem;
+                }
+            }
+            &__info {
+                &-box {
+                    margin-left: 18%;
+                    &:last-child {
+                        margin-left: calc(18% + 50px);
+                    }  
+                    & > span {
+                        font-size: 0.7rem;
+                    }
+                }
+            }
+        }
+    }
+// ------------------------------------- END ABOUT -------------------------------------
+
+// ------------------------------------- PRODUCTS -------------------------------------
+    .products {
+        &__cards {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        &__card {
+            position: relative;
+            margin-bottom: 20px;
+            margin-right: 0;
+            & > img {
+                display: block;
+                width: 400px;
+                height: 400px;
+            }
+            &-title{
+                position: absolute;
+                bottom: 50%;
+                font-size: 1.2rem;
+            }
+        }
+    }
+// ------------------------------------- END PRODUCTS -------------------------------------
+
+// ------------------------------------- DOORS -------------------------------------
+    .doors {
+        margin-top: 0;
+        margin-bottom: 0;
+        &__container {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        &__img {
+            min-height: 350px !important;
+            max-height: 350px !important;
+            width: 100% !important;
+            & > div {
+                min-height: 350px !important;
+                max-height: 350px !important;
+                width: 100% !important;
+            & > img {
+                    min-height: 350px !important;
+                    max-height: 350px !important;
+                    width: 100% !important;
+                }
+            }
+        }
+        &__info {
+            margin-top: 10px;
+            &-title {
+                margin-bottom: 15px;
+                & > p {
+                    font-size: 1rem;
+                }
+            }
+            &-description {
+                font-size: 0.8rem;
+            }
+            &-switch > div > .background__orange {
+                display: none;
+            }
+            &-switch > div > .wodo__arrow-l > div,
+            &-switch > div > .wodo__arrow-r > div {
+                display: flex;
+            }
+            &-params {
+                margin: 20px 0;
+                & > p {
+                    & > span {
+                        font-size: 0.8rem;
+                    }
+                    font-size: 0.8rem;
+                }
+            }
+        }
+    }
+// ------------------------------------- END DOORS -------------------------------------
+
+// ------------------------------------- DRAWER -------------------------------------
+    .drawer {
+        &__info {
+            margin-top: 20px;
+        }
+        &__info-box{
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        &__gallery-switch {
+            margin: 15px 0;
+        }
+    }
+// ------------------------------------- END DRAWER -------------------------------------
+
+// ------------------------------------- PROFILED -------------------------------------
+    .profiled {
+        margin: 10px 0;
+        &__body {
+            padding: 0;
+        }
+        &__top {
+            padding: 0 10px;
+            &-info {
+                & > h2 {
+                    font-size: 1rem;
+                }
+                & > p {
+                    font-size: 0.8rem;
+                }
+            }
+            &-images > div > img {
+                width: 100%;
+            }
+            &-images > div > div {
+                & > h2 {
+                    font-size: 0.8rem;
+                }
+                & > div {
+                    width: 45%;
+                }
+            }
+        }
+        &__j {
+            margin-right: 10px;
+        }
+        &__bottom {
+            &-info {
+                padding: 0 10px;
+                & > h2 {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+// ------------------------------------- END PROFILED -------------------------------------
+
+
+// ------------------------------------- FORMS -------------------------------------
+    .form {
+        &__box {
+            width: 85%;
+        }
+        &__checkbox{
+            display: flex;
+            flex-direction: column;
+            & > label {
+                display: flex;
+            }
+        }
+        &__button {
+            & > a {
+                padding: 15px 100px;
+            }
+        }
+    }
+// ------------------------------------- END FORMS -------------------------------------
+
+// ------------------------------------- CONTACTS -------------------------------------
+    .contacts {
+        &__img  {
+            width: auto;
+            & > img {
+                width: 100%;
+                min-height: 275px;
+            }
+        }
+        &__info {
+            & > div {
+                width: auto;
+                min-width: auto;
+                max-width: auto;
+            }
+            & > .contacts__main {
+                margin-right: 20px;
+            }
+            & > div > h2 {
+                font-size: 1rem;
+            }
+            & > div > p {
+                font-size: 0.8rem;
+            }
+        }
+    }
+// ------------------------------------- END CONTACTS -------------------------------------
+
+}
+
+@media screen and (max-width: 600px) {
+// ------------------------------------- ABOUT -------------------------------------
+    .about {
+        height: 530px;
+        &-mobile {
+            &__slogan {
+                bottom: -3%;
+            }
+            &__description {
+                width: auto;
+                max-width: 560px;
+                min-width: 320px;
+                padding: 0 20px;
+                & > p {
+                    font-size: 0.8rem;
+                }
+            }
+            &__info {
+                &-box {
+                    margin-left: 10%;
+                    &:last-child {
+                        margin-left: calc(10% + 50px);
+                        width: auto;
+                        padding-right: 20px;
+                    }  
+                    & > span {
+                        font-size: 0.7rem;
+                    }
+                }
+            }
+        }
+    }
+// ------------------------------------- END ABOUT -------------------------------------
+
+// ------------------------------------- MATERIALS -------------------------------------
+    .materials {
+        &__content {
+            height: 100px;
+        }
+        &__button > a {
+            padding: 15px 75px;
+        }
+    }
+// ------------------------------------- END MATERIALS -------------------------------------
+
+// ------------------------------------- FORMS -------------------------------------
+.form {
+    &__button {
+        padding: 15px 125px;
+    }
+}
+// ------------------------------------- END FORMS -------------------------------------
+
+}
+
+@media screen and (max-width: 470px) {
+    // ------------------------------------- ABOUT -------------------------------------
+    .about {
+        height: 555px;
+        &-mobile {
+            &__slogan {
+                bottom: -3%;
+            }
+            &__info {
+                &-box {
+                    margin-left: 5%;
+                    &:last-child {
+                        margin-left: calc(5% + 50px);
+                        width: auto;
+                        padding-right: 20px;
+                    }  
+                }
+            }
+        }
+    }
+// ------------------------------------- END ABOUT -------------------------------------
+
+}
+
+@media screen and (max-width: 420px) {
+    // ------------------------------------- ABOUT -------------------------------------
+    .about {
+        height: 580px;
+        &-mobile {
+            &__slogan {
+                bottom: -3%;
+            }
+            &__info {
+                &-box {
+                    margin-left: 5%;
+                    &:last-child {
+                        margin-left: calc(5% + 50px);
+                        width: auto;
+                        padding-right: 20px;
+                    }  
+                }
+            }
+        }
+    }
+// ------------------------------------- END ABOUT -------------------------------------
+
+// ------------------------------------- FORMS -------------------------------------
+    .form {
+        &__button {
+            padding: 15px 100px;
+        }
+    }
+// ------------------------------------- END FORMS -------------------------------------
+
+}
+
+@media screen and (max-width: 360px) {
+    // ------------------------------------- ABOUT -------------------------------------
+    .about {
+        height: 620px;
+        &-mobile {
+            &__slogan {
+                bottom: -2%;
+            }
+            &__info {
+                &-box {
+                    margin-left: 5%;
+                    &:last-child {
+                        margin-left: calc(5% + 50px);
+                        width: auto;
+                        padding-right: 20px;
+                    }  
+                }
+            }
+        }
+    }
+// ------------------------------------- END ABOUT -------------------------------------
+
+
+// ------------------------------------- PROFILED -------------------------------------
+.profiled {
+    margin: 10px 0;
+    &__body {
+        padding: 0;
+    }
+    &__top {
+        &-images > div > div {
+            & > div {
+                width: 35%;
+            }
+        }
+    }
+}
+// ------------------------------------- END PROFILED -------------------------------------
+
+
+}
+
+// ------------------------------------- END MEDIA -------------------------------------
+
+
+
+
+textarea {
+    margin-top: 50px;
+    margin-bottom: 30px;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #fff;
+    background-color: transparent;
+    color: #fff;
+    resize: none;
+    outline: none;
+    overflow: hidden;
+    font-size: 0.8rem;
+    border-radius: 0;
+}
+
+.form__question > label{
+    color: transparent;
+}
+
+textarea:focus {
+    &::placeholder {
+        color: transparent;
+    }
+}
+
+textarea:focus ~ label,
+textarea:checked ~ label {
+    left: 0;
+    color: rgba(250, 69, 0, 1);
+    font-size: 12px;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: #fff;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+#go-top {
+    position: fixed;
+    bottom: 20px; 
+    right: 40px;
+    text-align: center;
+    margin: 0 auto;
+    cursor:pointer; 
+    display:flex;
+    width: 60px;
+    height: 50px;
+    background: transparent;
+    line-height: 30px;
+    border: 3px solid rgba(250, 69, 0, 1);
+    justify-content: center;
+    align-items: center;
+    & > div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        border-bottom: 20px solid rgb(199, 199, 199, 0.8);
+
+    }
+  }
+  
+  #go-top:hover {
+    background: #333;
+    color: #fff;
+  }
+
+
