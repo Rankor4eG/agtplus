@@ -983,7 +983,7 @@ based on demand */
             display: none;
             border-bottom: 10px solid transparent;
             border-top: 10px solid transparent;
-            border-right: 15px solid rgb(199, 199, 199, 0.8);
+            border-right: 15px solid rgba(199, 199, 199, 0.8);
         }   
     }
     &-r {
@@ -993,7 +993,7 @@ based on demand */
             display: none;
             border-bottom: 10px solid transparent;
             border-top: 10px solid transparent;
-            border-left: 15px solid rgb(199, 199, 199, 0.8);
+            border-left: 15px solid rgba(199, 199, 199, 0.8);
         }
     }
     
@@ -2160,6 +2160,7 @@ based on demand */
 textarea {
     margin-top: 50px;
     margin-bottom: 30px;
+    max-height: 100px;
     width: 100%;
     border: none;
     border-bottom: 1px solid #fff;
@@ -2222,7 +2223,7 @@ select:-webkit-autofill:focus {
         justify-content: center;
         border-left: 20px solid transparent;
         border-right: 20px solid transparent;
-        border-bottom: 20px solid rgb(199, 199, 199, 0.8);
+        border-bottom: 20px solid rgba(199, 199, 199, 0.8);
 
     }
   }

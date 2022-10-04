@@ -1,0 +1,28 @@
+{
+  "name": "agtplus",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "concurrently \"serve\" \"open http://localhost:3000/\"",
+    "style": "cat style.scss | node-sass --output-style compressed > foobar.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rankor4eG/agtplus.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rankor4eG/agtplus/issues"
+  },
+  "homepage": "https://github.com/Rankor4eG/agtplus#readme",
+  "dependencies": {
+    "serve": "^14.0.1"
+  },
+  "devDependencies": {
+    "concurrently": "^7.4.0",
+    "node-sass": "^7.0.3"
+  }
+}

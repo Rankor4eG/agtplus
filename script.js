@@ -358,7 +358,7 @@ detectswipe("swipeWallBottom", wallBottom);
 
 
 let textarea = document.getElementsByTagName('textarea')[0];
-let labelTextarea = document.getElementById('labelTextarea')
+let labelTextarea = document.getElementById('labelTextarea');
 
 textarea.addEventListener('keydown', resize);
 
